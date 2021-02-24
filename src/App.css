@@ -23,6 +23,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-header{
+  background-color:rgb(73, 138, 223);
+  display:grid;
+  align-items:center;
+  font-size:large;
+  color:orangered;
+}
+
 
 .App-link {
   color: #61dafb;
