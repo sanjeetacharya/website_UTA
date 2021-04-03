@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
+import Blog from './components/pages/Blog';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path='/Events' component={Services} />
           <Route path='/Resources' component={Products} />
           <Route path='/Login' component={SignUp} />
+          <Route path='/Blog' component={Blog}/>
+
         </Switch>
       </Router>
     </>
