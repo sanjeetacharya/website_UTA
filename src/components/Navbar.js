@@ -68,6 +68,7 @@ function Navbar() {
                 Resources
               </Link>
             </li>
+            
 
             <li>
               <Link
@@ -75,7 +76,7 @@ function Navbar() {
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
-                Login
+                Sign Up
               </Link>
             </li>
           </ul>

@@ -4,14 +4,16 @@ import '../HeroSection.css';
 import { useEffect } from "react";
 
 function Blog(){
-    useEffect(() => {
-        window.location.href = "https://www.theshorthorn.com/life_and_entertainment/technology_games/";
-      }, []);
+   
 return (
     
-        <div>
-            <h2>Blog</h2>
-        </div>
+    <h2>
+    <div>
+    <a target="_blank" href="https://www.theshorthorn.com/life_and_entertainment/technology_games/">News @ UTA</a>
+
+        
+    </div>
+    </h2>
 );
 }
 export default Blog;
