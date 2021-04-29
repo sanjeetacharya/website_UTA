@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./SignUp.css";
-import "../../App.css";
+//import "../../App.css";
+import FormGroup from "react-bootstrap/esm/FormGroup";
 
 
-export default function Login() {
+
+export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,64 +20,65 @@ export default function Login() {
   }
 
   return (
-    <div className="Login">
-      <Form onSubmit={handleSubmit}>
-		  <h3>Your personal information</h3>
-	  <Form>
-	  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Name</Form.Label>
-    <Form.Control type="name" placeholder="First    last" />
-  </Form.Group>
+	<form>
+		<h1>Sign Up for ACM@UTA</h1>
+		
+		<p> 
+			Thank you for your interest in ACM. We provide a variety of services to the students. For more information on ACM services,
+			Please contact a ACM officer. 
+		</p>
+		<h3>Lets get your personal information</h3>
 
-		<p>UTA information</p>
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>UTA Email address</Form.Label>
-    <Form.Control type="email" placeholder="name@mavs.uta.edu" />
-  </Form.Group>
+		<div className="form-group">
+			<label>First name</label>
+			<input type="text" className="form-control" placeholder="First name" />
+		</div>
 
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Your student ID</Form.Label>
-    <Form.Control type="studentID" placeholder="100000000" />
-  </Form.Group>
+		<div className="form-group">
+			<label>Last name</label>
+			<input type="text" className="form-control" placeholder="Last name" />
+		</div>
+		<div className="form-group">
+			<label>Phone number</label>
+			<input type="text" className="form-control" placeholder="phone number" />
+		</div>
+		<h3>Now your UTA information</h3>
+		<div className="form-group">
+			<label>Email address</label>
+			<input type="email" className="form-control" placeholder="name@mavs.uta.edu" />
+		</div>
 
-  <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>What year are you in?</Form.Label>
-    <Form.Control as="select">
-      <option>I am a freshmen</option>
-      <option>I am a sophomore</option>
-      <option>I am a junior</option>
-      <option>I am a senior</option>
-      <option>None of these apply</option>
-    </Form.Control>
-  </Form.Group>
+		<div className="form-group">
+			<label> Create Password</label>
+			<input type="password" className="form-control" placeholder="Enter password" />
+		</div>
 
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>What is your major?</Form.Label>
-    <Form.Control type="studentMajor" placeholder="Software engineering" />
-  </Form.Group>
+		<div className="form-group">
+			<label> Confirm Password</label>
+			<input type="password" className="form-control" placeholder="same as original password" />
+		</div>
 
-  <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Are you a national ACM member?</Form.Label>
-    <Form.Control as="select">
-      <option>Yes</option>
-	  <option> NO</option>
-	</Form.Control>
-	</Form.Group>
+		<div className="form-group">
+			<label>Your UTA ID</label>
+			<input type="text" className="form-control" placeholder="100000000" />
+		</div>
+		<div className="form-group">
+			<label>Year</label>
+			<input type = "text" className="form-control" placeholder="Freshmen" />
+		</div>
 
-	<Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Would you like to receive emails about ongoing events at ACM@UTA?</Form.Label>
-    <Form.Control as="select">
-      <option>Yes</option>
-	  <option> NO</option>
-	</Form.Control>
-	</Form.Group>
-	<p>Our Local Membership Fee is $15 per academic year, National Membership Fee is $10 per academic year, or Lifetime Membership Fee is $50 for your entire academic career. All extra fees only apply at UTA. Make sure to make checks payable to ACM.</p>
-	<Form.Check type="radio" aria-label="radio 1" /> I agree
-</Form>
-      </Form>
-	  
-	   <Button variant="dark" align >Sign Up</Button>{' '}
-	   
-    </div>
-  );
-}
+		<div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                        <label className="custom-control-label" htmlFor="customCheck1">I would like to receive emails from ACM@UTA</label>
+                    </div>
+                </div>
+
+
+		<button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+		<p className="forgot-password text-right">
+			Already registered <a href="/Login">sign in?</a>
+		</p>
+	</form>
+);
+  }
