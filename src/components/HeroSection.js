@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/images/UTA-light.jpg' />
+      <image src='/public/images/uta-acm-logo.jpg' />
       <h1>Welcome to ACM@UTA</h1>
       <p>Be a part of the change</p>
       <div className='hero-btns'>

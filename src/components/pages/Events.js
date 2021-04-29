@@ -12,13 +12,17 @@ function Events(){
     //  }, []);
       
 return (
-    <h2>
+    
+
+    
         <div>
+            <h2>
         <a target="_blank" href="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=YWNtLnV0YUBnbWFpbC5jb20&src=b2Nya2lldWJiY3FjaHZtdDdmajZnZWE4cDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23E67C73&color=%237986CB">Events at ACM</a>
 
-            
+            </h2>
         </div>
-        </h2>
+        
+       
 );
 }
 export default Events;

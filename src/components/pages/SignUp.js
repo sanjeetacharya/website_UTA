@@ -1,97 +1,81 @@
-import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
-import './SignUp.css';
-import '../../App.css';
+import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "./SignUp.css";
+import "../../App.css";
 
 
-export default function SignUp(){
-				return (
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-			<div className="container">
-				<div className="row">
-					<div className="col-sm-3 returnHome">
-						<Link to="/" className="link"><i class="fas fa-backspace"></i> Return Home</Link>
-					</div>
-				</div>
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
 
-				<div className="row">
-					<div className="col-10 offset-1 text-center registerText">
-						<h3>Register to become a new user</h3>
-						<p>Already have an account? <Link to="/login" className="link">Log In</Link></p>
-					</div>
-				</div>
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
 
-				<div className="row">
-					<div className="col-10 offset-1 text-center">
-						<form noValidate onSubmit={this.onSubmit}>
-							{/* Name */}
-							<div className="col-8 offset-2">
-								<label htmlFor="name">Name:</label>
-								
-								<input
-									type="text"
-									onChange={this.onChange}
-									value={this.state.name}
-									
-									id="name"
-									
-									placeholder="Enter your name..."
-								/>
-							</div>
+  return (
+    <div className="Login">
+      <Form onSubmit={handleSubmit}>
+		  <h3>Your personal information</h3>
+	  <Form>
+	  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Name</Form.Label>
+    <Form.Control type="name" placeholder="First    last" />
+  </Form.Group>
 
-							{/* Email */}
-							<div className="col-8 offset-2">
-								<label htmlFor="email">Email:</label>
-								
-								<input
-									type="email"
-									onChange={this.onChange}
-									value={this.state.email}
-									
-									id="email"
-									
-									placeholder="Enter your email..."
-								/>
-							</div>
+		<p>UTA information</p>
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>UTA Email address</Form.Label>
+    <Form.Control type="email" placeholder="name@mavs.uta.edu" />
+  </Form.Group>
 
-							{/* Password */}
-							<div className="col-8 offset-2">
-								<label htmlFor="password">Password:</label>
-								
-								<input
-									type="password"
-									onChange={this.onChange}
-									value={this.state.password}
-									
-									id="password"
-									
-									placeholder="Enter a password..."
-								/>
-							</div>
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Your student ID</Form.Label>
+    <Form.Control type="studentID" placeholder="100000000" />
+  </Form.Group>
 
-							{/* Validate password */}
-							<div className="col-8 offset-2">
-								<label htmlFor="password2">Confirm Password:</label>
-								
-								<input
-									type="password"
-									onChange={this.onChange}
-									value={this.state.password2}
-									
-									id="password2"
-									
-									placeholder="Re-type your password..."
-								/>
-							</div>
+  <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>What year are you in?</Form.Label>
+    <Form.Control as="select">
+      <option>I am a freshmen</option>
+      <option>I am a sophomore</option>
+      <option>I am a junior</option>
+      <option>I am a senior</option>
+      <option>None of these apply</option>
+    </Form.Control>
+  </Form.Group>
 
-							
-						</form>
-					</div>
-				</div>
-			</div>
-		);
-	}
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>What is your major?</Form.Label>
+    <Form.Control type="studentMajor" placeholder="Software engineering" />
+  </Form.Group>
 
+  <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Are you a national ACM member?</Form.Label>
+    <Form.Control as="select">
+      <option>Yes</option>
+	  <option> NO</option>
+	</Form.Control>
+	</Form.Group>
 
-
-
+	<Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Would you like to receive emails about ongoing events at ACM@UTA?</Form.Label>
+    <Form.Control as="select">
+      <option>Yes</option>
+	  <option> NO</option>
+	</Form.Control>
+	</Form.Group>
+	<p>Our Local Membership Fee is $15 per academic year, National Membership Fee is $10 per academic year, or Lifetime Membership Fee is $50 for your entire academic career. All extra fees only apply at UTA. Make sure to make checks payable to ACM.</p>
+	<Form.Check type="radio" aria-label="radio 1" /> I agree
+</Form>
+      </Form>
+	  
+	   <Button variant="dark" align >Sign Up</Button>{' '}
+	   
+    </div>
+  );
+}
