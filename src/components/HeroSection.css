@@ -1,4 +1,4 @@
-image {
+video {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -7,7 +7,7 @@ image {
 }
 
 .hero-container {
-  background: src='/public/images/uta-acm-logo.jpg' ;
+  /* background: src='/public/images/uta-acm-logo.jpg' ; */
   height: 100vh;
   width: 100%;
   display: flex;
